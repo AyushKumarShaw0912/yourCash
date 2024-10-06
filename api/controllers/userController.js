@@ -34,7 +34,7 @@ export const login = catchAsyncHandler(async (req, res, next) => {
 
 })
 export const logout = catchAsyncHandler(async (req, res, next) => {
-    res.status(200).clearCookie("token",{
+    res.status(200).cookie("token",null,{
         expires: new Date(Date.now()),
         httpOnly: true,
     secure: true,    // Ensure it's secure if you're using HTTPS
