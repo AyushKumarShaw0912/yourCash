@@ -15,7 +15,7 @@ dotenv.config()
 app.use(express.json())
 const corsOption={
 	credentials: true,
-	origin:"http://localhost:5173"
+	origin:["http://localhost:5173","https://yourcash-frontend.onrender.com"]
 }
 
   app.use(cors(corsOption));
