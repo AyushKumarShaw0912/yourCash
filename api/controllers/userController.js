@@ -39,7 +39,6 @@ export const logout = catchAsyncHandler(async (req, res, next) => {
         httpOnly: true,
     secure: true,    // Ensure it's secure if you're using HTTPS
     sameSite: 'None',
-    domain:"https://yourcash-api.onrender.com"
     }).json({
         success: true,
         message: "Logout successful"
