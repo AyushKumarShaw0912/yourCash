@@ -13,8 +13,12 @@ const app=express()
 dotenv.config()
 //middlewares
 app.use(express.json())
+const corsOption={
+	credentials: true,
+	origin:"http://localhost:5173"
+}
 
-  app.use(cors());
+  app.use(cors(corsOption));
 app.use(cookieParser())
 
 //import routes
