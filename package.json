@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nodemon api/server.js",
     "start": "node api/server.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+    "build": "npm install"
   },
   "author": "Ayush",
   "license": "ISC",
