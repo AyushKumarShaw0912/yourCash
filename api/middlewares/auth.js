@@ -8,7 +8,7 @@ import { catchAsyncHandler } from "./catchAsyncHandler.js";
 export const isAuthenticated=catchAsyncHandler(async(req,res,next,err)=>{
     const {token}=req.cookies;
     console.log(token)
-    if(!token) return next(new ErrorHandler(err.message,404))
+    if(!token) return next(new ErrorHandler("Invalid user token",404))
 
     const decoded=jwt.verify(token,process.env.JWT_SECRET)
    
