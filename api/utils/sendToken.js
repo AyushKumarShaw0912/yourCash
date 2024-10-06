@@ -8,5 +8,6 @@ export const sendToken=(res,user,message,status=200)=>{
         success: true,
         message,
         user,
+        token
     })
     }
