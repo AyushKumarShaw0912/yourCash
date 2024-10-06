@@ -5,7 +5,7 @@ export const sendToken=(res,user,message,status=200)=>{
         httpOnly: true,
     secure: true,  // Ensure Secure is set, especially for HTTPS
     sameSite: 'None',
-       
+    domain:".https://yourcash-api.onrender.com" 
     }
     res.status(status).cookie("token",token,options).json({
         success: true,
